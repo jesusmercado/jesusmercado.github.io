@@ -1,1 +1,8 @@
+# Folder de salida de Jekyll
 _site
+
+# Gemfile, etc
+.bundle
+
+# Archivos de vim
+*.swp
