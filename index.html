@@ -6,8 +6,19 @@ title: Entradas del Posts
 <div id="home">
   <h2><i class="icon-bookmark"></i>Entradas del blog</h2>
   <ul id="blog-posts" class="posts">
-    {% for post in site.posts %}
+    {% for post in site.tags.blog %}
       <li><span>{{ post.date | date_to_string }} &raquo;</span><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
+  </ul>
+  <h2><i class="icon-book"></i>Traducciones</h2>
+  <ul id="translations" class="posts">
+    {% for post in site.tags.traducciones %}
+      <li><span>{{ post.date | date_to_string }} &raquo;</span><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+  <h2><i class="icon-beaker"></i>Proyectos</h2>
+  <dl id="projects" class="posts">
+    <dt>Pacto</dt>
+    <dd>Implementación en Ruby del patrón <a href="http://martinfowler.com/articles/consumerDrivenContracts.html">Consumer-Driven Contracts</a><dd>
   </ul>
 </div>
