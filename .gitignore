@@ -6,3 +6,6 @@ _site
 
 # Archivos de vim
 *.swp
+
+# Ignorar archivos de OSX
+.DS_Store
