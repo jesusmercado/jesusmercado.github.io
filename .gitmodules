@@ -1,0 +1,3 @@
+[submodule "jekyll-rss-feeds"]
+	path = jekyll-rss-feeds
+	url = https://github.com/snaptortoise/jekyll-rss-feeds
