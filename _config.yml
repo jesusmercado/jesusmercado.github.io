@@ -1,4 +1,26 @@
-name: Blog de Jesús Mercado
-markdown: redcarpet
+# Configuración general Jekyll
 pygments: true
 url: http://jesusmercado.com
+lsi: false
+exclude: [LICENSE, CNAME, README.md, .gitignore]
+
+# Personalización del tema
+theme:
+  # Color para la barra superior, enlaces, etc
+  highlight_color: '#3498db'
+
+  # Enlaces del perfil en la barra izquierda
+  social:
+    github: jesusmercado
+    twitter: jesumercadom
+
+  # "Hola, yo soy"
+  name: Jesús Mercado
+  email: jesusmmm@gmail.com
+  tagline: "weak opinions, strongly held"
+
+  # Llave de Google Analytics
+  google_analytics_key: UA-43694776-1
+
+  # Toggle "Descargo de responsabilidad" descargo en el pie de página
+  show_disclaimer: true
