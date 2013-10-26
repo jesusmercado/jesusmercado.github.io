@@ -1,6 +1,7 @@
 # Configuración general Jekyll
 pygments: true
 url: http://jesusmercado.com
+canonical: http://jesusmercado.com/
 lsi: false
 exclude: [LICENSE, CNAME, README.md, .gitignore]
 
