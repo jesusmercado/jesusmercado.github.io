@@ -4,6 +4,7 @@ url: http://jesusmercado.com
 canonical: http://jesusmercado.com/
 lsi: false
 exclude: [LICENSE, CNAME, README.md, .gitignore]
+description: Blog de Jesús Mercado
 
 # Personalización del tema
 theme:
