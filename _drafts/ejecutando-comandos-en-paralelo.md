@@ -1,8 +1,8 @@
 ---
 layout: post
-permalink: blog/ejecutando-comandos-en-paralelo
+permalink: guias/ejecutando-comandos-en-paralelo
 title: Ejecutando comandos en paralelo
-categories: [hacking, productividad, tecnología]
+categories: [guía, hacking, productividad, tecnología]
 tags:
 ---
 En estos días casi todos los dispositivos electrónicos que utilizamos (computadores, portátiles, celulares) vienen con capacidades de multiprocesamiento y como tecnólogo me es útil saber una forma simple y fácil de utilizar estos múltiples procesadores. Sé que puedo utilizar lenguajes de programación para distribuir múltiples tareas entre varios procesadores, pero eso requiere escribir código. Buscando una forma aún más “fácil” que programar, encontré una interesante herramienta: [**GNU parallel**][sitio].
