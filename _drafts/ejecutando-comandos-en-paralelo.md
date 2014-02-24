@@ -13,13 +13,10 @@ Existe una [guía oficial][guía] explicando la mayoría de las características
 
 # ¿Cómo instalar?
 
-## Ubuntu
+Sólo tenemos que ejecutar los siguientes comandos en la terminal:
 
-    sudo apt-get install parallel
-
-## OSX
-
-    brew install parallel
+    sudo apt-get install parallel # Ubuntu
+    brew install parallel         # OSX
 
 Después de la instalación tendremos acceso a un ejecutable: `parallel`. Para verificar que está instalado correctamente podemos ejecutar `parallel --version`, este comando mostrará una respuesta parecida a esta:
 
