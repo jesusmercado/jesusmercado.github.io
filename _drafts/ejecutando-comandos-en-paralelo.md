@@ -35,13 +35,17 @@ Después de la instalación tendremos acceso a un ejecutable: `parallel`. Para v
 
 Ahora que ya tenemos instalada la herramienta podemos comenzar.
 
-# Uso simple
+# Usos
+
+## Básico
 
 Bueno, primero vamos intentar ejecutar dos comandos en paralelo utilizando **GNU parallel**:
 
     parallel ::: foo bar
 
 En este caso los comandos `foo` y `bar` son enviados como parámetros para `parallel`. **GNU parallel** ejecuta los dos comandos en paralelo utilizando tantos procesadores tenga la máquina y luego concatena la respuesta de ambos comandos y la muestra en la Salida estándar *(stdout)*. Los `:::` son importantes para diferenciar entre las opciones que **GNU parallel** puede recibir y entre los comandos a ejecutar en paralelo.
+
+## Enviando parámetros
 
 Es útil ejecutar diferentes comandos en paralelo, pero muchas veces queremos ejecutar un mismo comando en paralelo pero enviando diferentes parámetros. Con lo que ya sabemos de **GNU parallel** podríamos intentar lo siguiente:
 
@@ -52,6 +56,8 @@ Como podemos ver, tenemos que repetir el comando `make` y lo único que cambia s
     parallel make ::: sandwich café
 
 En este caso el comando `make` es ejecutado en paralelo con el parámetro `sandwich` y también con el otro parámetro `café`.
+
+## Simulando la ejecución
 
 Una forma para evaluar cómo es que **GNU parallel** ejecutará los comandos es pasandolé el parámetro `dry-run`, que es mas o menos un simulacro, es decir solo mostrará en pantalla las instrucciones que se ejecutarán en paralelo, pero no las ejecutará *(solo simulará)*. Podemos simular el anterior ejemplo de la siguiente manera:
 
@@ -94,7 +100,7 @@ Ahora que ya conoces la herramienta **GNU parallel** decides utilizarla para gan
 
 Con esto pudiste reducir de **50 segundos a 10 segundos** la parte de inicialización de servicios, eso significa que tienes una respuesta *(feedback)* más rápida al ejecutar las pruebas automatizadas, ¡Jallalla! [^3].
 
-# Uso más avanzado
+# Usos más avanzados
 
 ## Entrada mediante archivo
 
