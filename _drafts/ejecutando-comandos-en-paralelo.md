@@ -67,7 +67,7 @@ La salida sería la siguiente:
 
 Ahora veamos un ejemplo *real* para poner en práctica lo visto hasta ahora.
 
-# Iniciando servicios en paralelo (Ejemplo)
+# Ejemplo: Iniciando servicios en paralelo
 
 En el proyecto que estas trabajando actualmente tienen algunas pruebas automatizadas. Antes de ejecutar las pruebas se tiene que iniciar unos servicios **REST**, ya que tu **SUT** (Sistema bajo prueba) depende de estos.
 
@@ -126,7 +126,7 @@ Como dije, en general se pasan rutas de archivos como parámetros. Una transform
 
 Veamos otro ejemplo "real" para utilizar lo estudiado hasta ahora.
 
-# Convertir formato de tu colección de música (Ejemplo)
+# Ejemplo: Convertir formato de tu colección de música
 
 Tienes toda tu colección de música en la carpeta `/música`, toda tu colección consta de miles de archivos en formato **MP3**. Después de haber asistido a una convención de **Software Libre** y haber escuchado acerca de formatos abiertos, decidiste que vas a convertir toda música para el formato **Ogg** [^4].
 
