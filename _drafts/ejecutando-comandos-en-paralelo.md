@@ -133,7 +133,7 @@ Veamos otro ejemplo "real" para utilizar lo estudiado hasta ahora.
 
 Tienes toda tu colección de música en la carpeta `/música`, toda tu colección consta de miles de archivos en formato **MP3**. Después de haber asistido a una convención de **Software Libre** y haber escuchado acerca de formatos abiertos, decidiste que vas a convertir toda música para el formato **Ogg** [^4].
 
-Para para convertir la música decides utilizar la herramienta [**ffmpeg**][ffmpeg]. Después de leer la documetación sabes que para convertir un archivo de un formato a otro solo tienes que especificar el nombre del nuevo archivo con su nueva extensión y **ffmepg** hará el resto del trabajo. Por ejemplo para convertir tu música favorita de **MP3** a **Ogg** ejecutas lo siguiente:
+Para convertir la música decides utilizar la herramienta [**ffmpeg**][ffmpeg]. Después de leer la documentación sabes que para convertir un archivo de un formato a otro solo tienes que especificar el nombre del nuevo archivo con su nueva extensión y **ffmepg** hará el resto del trabajo. Por ejemplo para convertir tu música favorita de **MP3** a **Ogg** ejecutas lo siguiente:
 
     ffmpeg -i favorita.mp3 favorita.ogg
 
@@ -143,16 +143,16 @@ Ahora que sabes cómo convertir un archivo, te decides a convertir toda tu colec
 
 Vamos a analizar la solución paso a paso.
 
-Primero listas todos los archivos **MP3** en la carpeta `/música` con el comandos `ls /música/*.mp3` y luego redireccionas esta lista a la Entrada estándar usando el comando **pipe** `|`. Usas los símbolos `{}` y `{.}.ogg` para indicar el nombre original del archivo y para indicar el nuevo nombre del archivo respectivamente. Y finalmente activas la opción `--dry-run` todo el tiempo que estuviste experimentando, de esta forma logras simular lo que se ejecutará. Para finalmente convertir toda tu colección de música solo tienes que dejar de usar la opción `--dry-run`.
+Primero listas todos los archivos **MP3** en la carpeta `/música` con el comandos `ls /música/*.mp3` y luego redireccionas esta lista a la Entrada estándar usando el comando **pipe** `|`. **ffmpeg** necesita saber tanto el **nombre original** del archivo *(junto con su extensión original)* como también el **nuevo nombre** del archivo *(con la extensión cambiada)*, para eso utilizas los símbolos `{}` y `{.}.ogg` respectivamente. Y finalmente activas la opción `--dry-run` todo el tiempo que estuviste experimentando, de esta forma logras simular lo que se ejecutará. Para finalmente convertir toda tu colección de música solo tienes que dejar de usar la opción `--dry-run`.
 
 # Conclusión
 
-**GNU** es una poderosa herramienta que está disponible para ayudar a ejecutar en paralelo comandos simples. No es necesario crear código de más de una linea para poder aprovechar el multiprocesamiento que tienen los dispositivos que usamos a diario. Si tienes quieres explorar aún más todas las opciones puedes dar un vistazo al manual `man parallel` y también a la [guía oficial][guía].
+**GNU** es una poderosa herramienta que está disponible para ayudar a ejecutar en paralelo comandos simples. No es necesario crear código de más de una linea para poder aprovechar el multiprocesamiento que tienen los dispositivos que usamos a diario. Si quieres explorar aún más todas las opciones puedes dar un vistazo al manual `man parallel` y también a la [guía oficial][guía].
 
 [sitio]: https://www.gnu.org/software/parallel/
 [guía]: https://www.gnu.org/software/parallel/parallel_tutorial.html
 [ffmpeg]: http://ffmpeg.org/
-[^1]: Estos son nombres en clave, tu proyecto es de alto nivel de confidencialidad, por eso decieron dar nombre a sus servicios en honor a los 5 principales monumentos de Tiahuanacu: Puerta del Sol, Puerta de la Luna, Monolito Ponce, Monolito Fraile y Monolito Bennett.
+[^1]: Estos son nombres en clave porque tu proyecto es de alto nivel de confidencialidad, por eso decieron dar nombre a sus servicios en honor a los 5 principales monumentos de Tiahuanacu: Puerta del Sol, Puerta de la Luna, Monolito Ponce, Monolito Fraile y Monolito Bennett.
 [^2]: La inicialización demora este tiempo porque después de iniciar el servicio en un proceso separado *(fork)* se verifica si el servicio ya está listo para recibir peticiones, para esta verificación un `ping` satisfactorio es suficiente.
 [^3]: Palabra en Aymara que traducida al español significa ¡Viva!.
 [^4]: Ogg es un formato libre y abierto de medios, eso significa que no está sujeto a patentes de software como MP3.
