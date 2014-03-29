@@ -3,8 +3,9 @@ layout: post
 permalink: guias/ejecutando-comandos-en-paralelo
 title: Ejecutando comandos en paralelo
 categories: [guía, hacking, productividad, tecnología]
-tags:
+tags: guias
 ---
+
 En estos días casi todos los dispositivos electrónicos que utilizamos (computadores, portátiles, celulares) vienen con capacidades de multiprocesamiento y como tecnólogo me es útil saber una forma simple y fácil de utilizar estos múltiples procesadores. Sé que puedo utilizar lenguajes de programación para distribuir múltiples tareas entre varios procesadores, pero eso requiere escribir código. Buscando una forma aún más “fácil” que programar, encontré una interesante herramienta: [**GNU parallel**][sitio].
 
 Existe una [guía oficial][guía] explicando la mayoría de las características de esta herramienta. Esa guía es bastante extensa pero lamentablemente no es muy amigable. Entonces decidí escribir esta pequeña guía amigable con la intención de que ayude a entender las características básicas de esta poderosa herramienta.
@@ -45,6 +46,8 @@ Bueno, primero vamos intentar ejecutar dos comandos en paralelo utilizando **GNU
 
 En este caso los comandos `foo` y `bar` son enviados como parámetros para `parallel`. **GNU parallel** ejecuta los dos comandos en paralelo utilizando tantos procesadores tenga la máquina y luego concatena la respuesta de ambos comandos y la muestra en la Salida estándar *(stdout)*. Los `:::` son importantes para diferenciar entre las opciones que **GNU parallel** puede recibir y entre los comandos a ejecutar en paralelo.
 
+![Distribuir comandos entre múltiples procesadores](/images/ejecutando-comandos-en-paralelo/distribuir-comandos.png "Distribuir comandos entre múltiples procesadores")
+
 ## Enviando parámetros
 
 Es útil ejecutar diferentes comandos en paralelo, pero muchas veces queremos ejecutar un mismo comando en paralelo pero enviando diferentes parámetros. Con lo que ya sabemos de **GNU parallel** podríamos intentar lo siguiente:
@@ -56,6 +59,8 @@ Como podemos ver, tenemos que repetir el comando `make` y lo único que cambia s
     parallel make ::: sandwich café
 
 En este caso el comando `make` es ejecutado en paralelo con el parámetro `sandwich` y también con el otro parámetro `café`.
+
+![Distribuir comandos con parámetros entre múltiples procesadores](/images/ejecutando-comandos-en-paralelo/distribuir-comandos-con-parametros.png "Distribuir comandos con parámetros entre múltiples procesadores")
 
 ## Simulando la ejecución
 
